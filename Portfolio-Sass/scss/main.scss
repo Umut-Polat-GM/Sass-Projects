@@ -42,15 +42,19 @@ main {
 
   .social-icons {
     position: fixed;
-    bottom: 1rem;
-    left: 1rem;
+    bottom: 2.5rem;
+    left: 38%;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
 
     a {
-      padding: 0.4rem;
+      padding: 0.3rem;
       @include transition-ease;
 
       &:hover {
         color: $secondary-color;
+        transform: scale(1.2);
       }
     }
   }
@@ -64,4 +68,41 @@ footer {
   text-align: right;
   padding: 1rem;
   color: set-text-color($primary-color);
+}
+
+@media only screen and (max-width:768px){
+
+  main {
+    .social-icons {
+      left: 30%;
+      width: 34%;
+  
+      a {
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+}
+@media only screen and (max-width:600px){
+
+  main {
+    .social-icons {
+      left: 25%;
+      width: 40%;
+    }
+  }
+
+}
+@media only screen and (max-width:438px){
+
+  main {
+    .social-icons {
+      display: none;
+    }
+  }
+
 }

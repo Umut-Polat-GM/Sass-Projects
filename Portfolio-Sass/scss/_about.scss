@@ -9,7 +9,7 @@
         rgba($primary-color, 0.9),
         rgba($primary-color, 0.3)
       ),
-      url("/dist/img/umutpp.JPG") center top;
+      url("/dist/img/project-1.jpg") center top;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -55,6 +55,10 @@
   .social-icons {
     display: flex;
     flex-direction: column;
+    left: 1.4rem;
+    bottom: 1rem;
+    width: 50px;
+    height: 200px;
   }
 
   footer {
