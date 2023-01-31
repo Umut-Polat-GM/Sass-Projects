@@ -17,10 +17,17 @@
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid set-text-color($primary-color);
+    animation:  names 3s infinite ease-in-out;
 
     &--last {
       color: $secondary-color;
       font-weight: 700;
+    }
+  }
+  @keyframes names {
+    50%{
+      opacity: 0.9;
+      transform: scale(1.01);
     }
   }
 }
