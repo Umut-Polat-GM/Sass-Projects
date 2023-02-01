@@ -1,0 +1,138 @@
+@import "config";
+@import "home";
+@import "menu.scss";
+@import "about";
+@import "projects"; 
+@import "contact";
+@import "responsive";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Public+Sans:wght@300;400&display=swap');
+
+body {
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  animation: transitionIn .75s ease-in;
+}
+
+@keyframes transitionIn{
+  from {
+    opacity: 0;
+    transform: translateY(-10);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#preloader {
+  background: #000 url(/dist/img/preloader.gif) no-repeat center center;
+  background-size: 15%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+a {
+  color: set-text-color($primary-color);
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+
+  .social-icons {
+    position: fixed;
+    bottom: 4rem;
+    left: 38%;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      padding: 0.3rem;
+      @include transition-ease;
+
+      &:hover {
+        color: $secondary-color;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: set-text-color($primary-color);
+}
+
+@media only screen and (max-width:768px){
+
+  main {
+    .social-icons {
+      left: 30%;
+      width: 34%;
+  
+      a {
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+}
+@media only screen and (max-width:600px){
+
+  main {
+    .social-icons {
+      left: 25%;
+      width: 40%;
+    }
+  }
+
+}
+@media only screen and (max-width:438px){
+
+  main {
+    .social-icons {
+      left: 20%;
+      width: 50%;
+      padding-bottom: 2rem;
+      align-self: center;
+      
+      a i {
+        padding: 0.4rem;
+      }
+    }
+  }
+
+}
